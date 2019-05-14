@@ -1,0 +1,97 @@
+USE fyctdb;
+
+INSERT INTO usuario
+VALUES ('a.salgado.gaspar@gmail.com', 'Gaspar', 'Salgado', 
+		 'Alejandro Alfredo', '8331551748', 'micontrasenia',
+	 'Mexico', 'Nuevo Leon', 'Alguna colonia', 'Alguna calle',
+       'Algun numero');
+
+INSERT INTO usuario(Correo,Contrasena)
+VALUES ('random@hotmail.com', '12345');
+
+
+INSERT INTO producto(Nombre,Precio,Descripcion)
+VALUES ('SuperTenis', '240','Este tenis te hara volar');
+
+INSERT INTO producto(Nombre,Precio,Descripcion)
+VALUES ('MegaTenis', '350','Este tenis te hara atravesar paredes');
+
+INSERT INTO producto(Nombre,Precio,Descripcion)
+VALUES ('HyperTenis', '530','Este tenis te hara ser invisible');
+
+
+
+INSERT INTO productoimagen(IDProducto,Ubicacion,ImgPrincipal)
+VALUES (1, 'imagenes/productos/producto1/producto1_1.jpg',true);
+
+INSERT INTO productoimagen(IDProducto,Ubicacion,ImgPrincipal)
+VALUES (2, 'imagenes/productos/producto2/producto2_1.jpg',true);
+
+INSERT INTO productoimagen(IDProducto,Ubicacion,ImgPrincipal)
+VALUES (3, 'imagenes/productos/producto3/producto3_1.jpg',true);
+
+
+
+
+INSERT INTO orden(Fecha, Total, Direccion, EstatusPago, Correo) 
+VALUES (now(), 1070, 'direccion del comprador', true, 'a.salgado.gaspar@gmail.com');
+
+INSERT INTO OrdenDetalle (IDOrden, IDProducto, Subtotal, Cantidad) 
+VALUES (1, 1, 720, 3);
+
+INSERT INTO OrdenDetalle (IDOrden, IDProducto, Subtotal, Cantidad) 
+VALUES (1, 2, 350, 1);
+
+
+
+INSERT INTO orden(Fecha, Total, Direccion, EstatusPago, Correo) 
+VALUES (now(), 2650, 'direccion del comprador', true, 'eduardo.salgado@gmail.com');
+
+INSERT INTO OrdenDetalle (IDOrden, IDProducto, Subtotal, Cantidad) 
+VALUES (2, 3, 2650, 5);
+
+
+
+INSERT INTO orden(Fecha, Total, Direccion, EstatusPago, Correo) 
+VALUES (now(), 240, 'direccion del comprador', true, 'eduardo.salgado@gmail.com');
+
+INSERT INTO OrdenDetalle (IDOrden, IDProducto, Subtotal, Cantidad) 
+VALUES (3, 1, 240, 1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

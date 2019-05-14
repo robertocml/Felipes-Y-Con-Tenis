@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FYCT</title>
+
+    <!-- CSS  -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link
+      href="css/materialize.css"
+      type="text/css"
+      rel="stylesheet"
+      media="screen,projection"
+    />
+    <link
+      href="css/style.css"
+      type="text/css"
+      rel="stylesheet"
+      media="screen,projection"
+    />
+    <link rel="stylesheet" type="text/css" href="css/admin.css" />
+    <style>
+      body {
+        background-color: #262626;
+      }
+
+      .red {
+        background-color: #ad2424;
+      }
+
+      input[type="checkbox"]{
+        width: 30px; /*Desired width*/
+        height: 30px; /*Desired height*/
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="red" role="navigation">
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="/" class="brand-logo">
+          <img src="imagenes/logo.png" />
+        </a>
+        <ul id="listBtn" class="right hide-on-med-and-down">
+          <li id="LogoutBtn">
+            <a href="/LogoutAction" style="font-size:20px;color:white"
+              >Logout</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <br />
+    <br />
+
+    <div>
+      <h3 id="saludoAdmin" class="center-align" style="color:white">
+        Bienvenido/a administrador
+      </h3>
+    </div>
+
+    <div id="agregar" class="modal ">
+      <h5 class="modal-close" id="close">&#10005;</h5>
+      <div class="modal-content center">
+        <ul class="tabs">
+          <li class="tab col s3"><a href="#addProducto">Producto</a></li>
+          <li class="tab col s3"><a href="#addFoto" id="clickFoto">Fotografia</a></li>
+          <li class="tab col s3"><a href="#submit">Subir</a></li>
+        </ul>
+        <div id="addProducto">
+        <h4>Añade producto</h4>
+        <br />
+        <form>
+          <div class="input-field">
+            <input type="text" id="nombreProducto" />
+            <label for="nombreProducto">Nombre del Producto</label>
+          </div>
+          <br />
+          <div class="input-field">
+            <input type="number" id="precioProducto" />
+            <label for="nombreProducto">Precio del Producto</label>
+          </div>
+          <br />
+          <div class="input-field">
+            <input type="text" id="descripcionProducto" />
+            <label for="nombreProducto">Descripcion del Producto</label>
+          </div>
+          <br />
+          <div class="input-field">
+            <input type="number" id="cantidadProducto" />
+            <label for="nombreProducto">Disponibilidad del Producto</label>
+          </div>
+          <br />
+          <div class="input-field">
+            <input type="text" id="categoriaProducto" />
+            <label for="nombreProducto">Categoria del Producto</label>
+          </div>
+        </div>
+        </form>
+        <div id="addFoto" >
+          <h3>Añade una foto del producto</h3>
+          <br>
+          <form class="fileupload"
+          action="uploadIMG"
+          method="post"
+          enctype="multipart/form-data">
+          <input type="file" name="upfile" value="" />
+          <input class="btn tooltipped" data-position="bottom" data-tooltip="Guarda foto antes de continuar" type="submit" value="subir foto" />
+          <br />
+        </form>
+      </div>
+      <div id="submit">
+        <br>
+        <h3>Agregar</h3>
+        <input
+              type="submit"
+              value="Aceptar"
+              class="btn btn-large"
+              id="añadirProducto"
+            />
+        </div>
+
+      </div>
+    </div>
+    
+    <div id="eliminar" class="modal ">
+      <h5 class="modal-close" id="close">&#10005;</h5>
+      <div class="modal-content center">
+        <h4>Elimina productos</h4>
+        <br />
+        <table id="product_selection" class="highlight">
+          <thead>
+            <tr>
+              <th>Seleccion</th>
+              <th>Producto</th>
+              <th>Precio</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <!-- 
+          <tr>
+            <td><img src="https://ss237.liverpool.com.mx/xl/1043934841.jpg" height="100" width="200"></td>
+            <td>Zapato1</td>
+            <td>1</td>
+            <td>
+              <div><a href="#!"><i class="tiny material-icons left">expand_less</i></a></div>
+              <div><a href="#!"><i class="tiny material-icons left">expand_more</i></a></div>
+            </td>
+            <td>$0.87</td>
+            <td><a class="waves-effect waves-light btn"><i class="material-icons bt">remove_shopping_cart</i></a></td>
+          </tr>
+          --></tbody>
+        </table>
+        <br />
+        <br />
+        <input id="EliminarProductos" type="Button" value="Eliminar" />
+        <br />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col s12">
+        <div class="card red lighten-2 card-panel hoverable">
+          <div class="card-content white-text">
+            <span class="card-title center-align">Editar productos</span>
+            <p class="center-align">
+              <b>En esta sección se agregan/eliminan/modifican productos.</b>
+
+              <!--<p>
+                <input type="checkbox" id="test5" />
+                <label for='test5'>Red</label>  
+              </p>-->
+            </p>
+          </div>
+          <div class="card-action center-align">
+            <a href="#agregar" class="btn btn-large teal modal-trigger"
+              >Agregar</a
+            >
+            <!--<a href="#" class="btn btn-large teal modal-trigger">Modificar</a>-->
+            <a href="#eliminar" class="btn btn-large teal modal-trigger"
+              >Eliminar</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="col s6">
+        <div class="card red lighten-2 card-panel hoverable">
+          <div class="card-content white-text">
+            <span class="center-align card-title">Ventas</span>
+            <div class="teal lighten-5">
+              <table class="highlight red darken-2">
+                <thead>
+                  <tr>
+                    <th>Cant. vendidos</th>
+                    <th>Producto</th>
+                    <th>Ganancias</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td>10</td>
+                    <td>Zapato 1</td>
+                    <td>$0.87</td>
+                  </tr>
+                  <tr>
+                    <td>15</td>
+                    <td>Zapato 2</td>
+                    <td>$3.76</td>
+                  </tr>
+                  <tr>
+                    <td>13</td>
+                    <td>Zapato 3</td>
+                    <td>$7.00</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="card-action"></div>
+        </div>
+      </div>
+
+      <div class="col s6">
+        <div class="card red lighten-2 card-panel hoverable">
+          <div class="card-content white-text">
+            <span class="center-align card-title">Productos</span>
+
+            <table class="highlight red darken-2">
+              <thead>
+                <tr>
+                  <th>Foto</th>
+                  <th>Descripción</th>
+                  <th>Precio</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td id="ren_imagen">
+                    <img
+                      id="imagen_tenis"
+                      class="circle responsive-img"
+                      src="https://cdn1.coppel.com/images/catalog/pr/8090602-1.jpg"
+                    />
+                  </td>
+                  <td>Zapato 1</td>
+                  <td>$300</td>
+                </tr>
+                <tr>
+                  <td id="ren_imagen">
+                    <img
+                      id="imagen_tenis"
+                      class="circle responsive-img"
+                      src="https://http2.mlstatic.com/tenis-vans-old-skool-negro-blanco-D_NQ_NP_534325-MLM25423083364_032017-F.jpg"
+                    />
+                  </td>
+                  <td>Zapato 2</td>
+                  <td>$250</td>
+                </tr>
+                <tr>
+                  <td id="ren_imagen">
+                    <img
+                      id="imagen_tenis"
+                      class="circle responsive-img"
+                      src="https://cdn1.coppel.com/images/catalog/pr/8079312-1.jpg?iresize=width:300,height:240"
+                    />
+                  </td>
+                  <td>Zapato 3</td>
+                  <td>$459</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="card-action"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="tarjeta" class="row"></div>
+
+    <footer class="page-footer red">
+      <div class="footer-copyright">
+        <div class="container">
+          Derechos reservados FYCT
+        </div>
+      </div>
+    </footer>
+
+    <!-- Dropdown Structure -->
+    <ul id="carritoDrop" class="dropdown-content collection">
+      <div id="dropdown_container"></div>
+
+      <li class="divider"></li>
+      <li>
+        <a href="/Carrito"
+          ><i class="material-icons">shopping_cart</i>Got to cart</a
+        >
+      </li>
+    </ul>
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/admin.js"></script>
+    <!--<script src="js/login.js"></script>
+    <script src="js/checkLogin.js"></script>-->
+  </body>
+</html>

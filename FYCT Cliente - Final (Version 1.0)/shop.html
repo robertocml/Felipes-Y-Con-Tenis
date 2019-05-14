@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FYCT</title>
+
+    <!-- CSS  -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="css/materialize.css"
+      type="text/css"
+      rel="stylesheet"
+      media="screen,projection"
+    />
+    <link
+      href="css/style.css"
+      type="text/css"
+      rel="stylesheet"
+      media="screen,projection"
+    />
+  </head>
+  <body>
+    <nav class="white" role="navigation">
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="/" class="brand-logo">
+          <img src="imagenes/logo.png" />
+        </a>
+        <ul class="right hide-on-med-and-down">
+          <li id="homeBtn"><a href="/">Home</a></li>
+          <li id="storeBtn"><a href="/Tienda">Store</a></li>
+          <li id="loginBtn"><a href="/IniciarSesion">Login</a></li>
+          <li id="registerBtn"><a href="/Registro">Register</a></li>
+          <li id="cartBtn">
+            <a class="dropdown-trigger" href="#" data-target="carritoDrop"
+              >Cart</a
+            >
+          </li>
+        </ul>
+
+        <ul id="nav-mobile" class="sidenav">
+          <li id="homeBtnMob"><a href="/">Home</a></li>
+          <li id="storeBtnMob"><a href="/Tienda">Store</a></li>
+          <li id="loginBtnMob"><a href="/IniciarSesion">Login</a></li>
+          <li id="registerBtnMob"><a href="/Registro">Register</a></li>
+          <li id="cartBtnMob"><a href="/Carrito">Cart</a></li>
+        </ul>
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger"
+          ><i class="material-icons">menu</i></a
+        >
+      </div>
+    </nav>
+
+    <br />
+    <br />
+
+    <div class="container">
+      <div class="section">
+        <div id="product_container" class="row">
+          <!--
+    <div class="col s4">
+     <div class="card">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="imagenes/productos/producto1/producto1_1.jpg">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">Zapato<i class="material-icons right">more_vert</i></span>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Zapato<i class="material-icons right">close</i></span>
+      <p>Here is some more information about this product that is only revealed once clicked on.</p>
+    </div>
+  </div>
+</div>
+   -->
+        </div>
+
+        <!--
+<button id="image_button" type="button">Insert Image</button>
+-->
+      </div>
+    </div>
+
+    <footer class="page-footer teal">
+      <div class="footer-copyright">
+        <div class="container">
+          Derechos reservados FYCT
+        </div>
+      </div>
+    </footer>
+
+    <!-- Dropdown Structure -->
+    <ul id="carritoDrop" class="dropdown-content collection">
+      <div id="dropdown_container"></div>
+
+      <li class="divider"></li>
+      <li>
+        <a href="/Carrito"
+          ><i class="material-icons">shopping_cart</i>Got to cart</a
+        >
+      </li>
+    </ul>
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/shopImageInserter.js"></script>
+    <script src="js/shop.js"></script>
+    <script src="js/checkLogin.js"></script>
+    <script src="js/cartDropDown.js"></script>
+  </body>
+</html>

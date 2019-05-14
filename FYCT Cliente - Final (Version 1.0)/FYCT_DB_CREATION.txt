@@ -1,0 +1,78 @@
+CREATE DATABASE fyctdb;
+USE fyctdb;
+
+CREATE TABLE Usuario (
+	Correo varchar(255),
+    ApellidoM varchar(255),
+    ApellidoP varchar(255),
+    Nombres varchar(255),
+    Telefono varchar(255),
+    Contrasena varchar(255) NOT NULL,
+    Pais varchar(255),
+    Estado varchar(255),
+    Colonia varchar(255),
+    Calle varchar(255),
+    Numero varchar(255),
+    constraint PK_Correo PRIMARY KEY (Correo)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE Producto (
+	IDProducto int AUTO_INCREMENT,
+    Nombre varchar(255) NOT NULL,
+    Precio float NOT NULL,
+    Descripcion varchar(255) NOT NULL,
+    constraint PK_IDProducto PRIMARY KEY (IDProducto)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE Orden (
+	IDOrden int AUTO_INCREMENT,
+    Fecha datetime NOT NULL,
+    NumeroOrden varchar(255),
+    Total float NOT NULL,
+    Direccion varchar(255) NOT NULL,
+    MetodoPago varchar(255),
+    EstatusPago bool NOT NULL,
+    Correo varchar(255) NOT NULL,
+    constraint PK_IDOrden PRIMARY KEY (IDOrden),
+	constraint FK_Correo FOREIGN KEY (Correo)
+    REFERENCES Usuario(Correo)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE OrdenDetalle (
+	IDOrden int NOT NULL,
+    IDProducto int NOT NULL,
+    Subtotal float NOT NULL,
+    Cantidad int NOT NULL,
+	constraint FK_IDOrden FOREIGN KEY (IDOrden)
+    REFERENCES Orden(IDOrden),
+    constraint FK_IDProducto FOREIGN KEY (IDProducto)
+    REFERENCES Producto(IDProducto),
+    constraint PK_OrdenDetalle PRIMARY KEY (IDOrden, IDProducto)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+CREATE TABLE CarritoDetalle (
+	Correo varchar(255) NOT NULL,
+    IDProducto int NOT NULL,
+    Cantidad int NOT NULL,
+	constraint FK_Correo2 FOREIGN KEY (Correo)
+    REFERENCES Usuario(Correo),
+    constraint FK_IDProducto2 FOREIGN KEY (IDProducto)
+    REFERENCES Producto(IDProducto),
+    constraint PK_CarritoDetalle PRIMARY KEY (Correo, IDProducto)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE ProductoImagen (
+	IDImagen int AUTO_INCREMENT,
+    IDProducto int NOT NULL,
+	DatosBinario varbinary(255),
+	Ubicacion varchar(255),
+    ImgPrincipal bool NOT NULL,
+    constraint FK_IDProducto3 FOREIGN KEY (IDProducto)
+    REFERENCES Producto(IDProducto),
+    constraint PK_IDImagen PRIMARY KEY (IDImagen)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+

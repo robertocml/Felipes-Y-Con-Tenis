@@ -1,0 +1,12 @@
+#ren_imagen {
+  width: 20%;
+}
+
+td,
+th {
+  text-align: center;
+}
+
+.teal {
+  background-color: #c80c0c !important;
+}

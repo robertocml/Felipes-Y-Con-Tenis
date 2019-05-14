@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>FYCT</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="/" class="brand-logo" >  <img src="imagenes/logo.png">   </a> 
+      <ul class="right hide-on-med-and-down">
+        
+        <li id="homeBtn"><a href="/">Home</a></li>
+        <li id="storeBtn"><a href="/Tienda">Store</a></li>
+        <li id="loginBtn"><a href="/IniciarSesion">Login</a></li>
+        <li id="registerBtn"><a href="/Registro">Register</a></li>
+        <li id="cartBtn"><a class='dropdown-trigger' href='#' data-target='carritoDrop'>Cart</a></li>
+
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li id="homeBtnMob"><a href="/">Home</a></li>
+        <li id="storeBtnMob"><a href="/Tienda">Store</a></li>
+        <li id="loginBtnMob"><a href="/IniciarSesion">Login</a></li>
+        <li id="registerBtnMob"><a href="/Registro">Register</a></li>
+        <li id="cartBtnMob"><a href="/Carrito">Cart</a></li>
+
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+<br>
+<br>
+<br>
+
+<div>
+    <h5 class="center-align">Carrito</h5>
+</div>
+<div class="container">
+  
+  <table id= "product_container" class="highlight">
+      <thead>
+        <tr>
+            <th></th>
+            <th>Articulo</th>
+            <th>Cantidad</th>
+            <th></th> 
+            <th>Precio</th>
+            <th></th>
+
+        </tr>
+      </thead>
+
+        <tbody>
+          <!-- 
+          <tr>
+            <td><img src="https://ss237.liverpool.com.mx/xl/1043934841.jpg" height="100" width="200"></td>
+            <td>Zapato1</td>
+            <td>1</td>
+            <td>
+              <div><a href="#!"><i class="tiny material-icons left">expand_less</i></a></div>
+              <div><a href="#!"><i class="tiny material-icons left">expand_more</i></a></div>
+            </td>
+            <td>$0.87</td>
+            <td><a class="waves-effect waves-light btn"><i class="material-icons bt">remove_shopping_cart</i></a></td>
+          </tr>
+          <tr>
+            <td><img src="https://ss237.liverpool.com.mx/xl/1043934841.jpg" height="100" width="200"></td>
+            <td>Zapato2</td>
+            <td>1</td>
+            <td>
+              <div><a href="#!"><i class="tiny material-icons left">expand_less</i></a></div>
+              <div><a href="#!"><i class="tiny material-icons left">expand_more</i></a></div>
+            </td>
+            <td>$3.76</td>
+            <td><a class="waves-effect waves-light btn"><i class="material-icons bt">remove_shopping_cart</i></a></td>
+          </tr>
+          <tr>
+            <td><img src="https://ss237.liverpool.com.mx/xl/1043934841.jpg" height="100" width="200"></td>
+            <td>Zapato3</td>
+            <td>1</td>
+            <td>
+              <div><a href="#!"><i class="tiny material-icons left">expand_less</i></a></div>
+              <div><a href="#!"><i class="tiny material-icons left">expand_more</i></a></div>
+            </td>
+            <td>$7.00</td>
+            <td><a class="waves-effect waves-light btn"><i class="material-icons bt">remove_shopping_cart</i></a></td>
+          </tr>
+         <div class="divider"></div>
+         <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td id="total">
+            <h5 class="right-align">Total  $11.63</h5>
+         </td>
+         </tr>
+         CSS  -->
+        </tbody>
+        <tfoot class="subtotal">
+          
+        </tfoot>
+  </table>
+</div>
+<br>
+<div class="row">
+  <div id = "comprar"  class="col s3 offset-s9"><a href="/ShopConfirmation" class="waves-effect waves-light btn-large " style="margin: 30px 0">Comprar</a></div>
+</div>
+
+<footer class="page-footer teal">
+    
+    <div class="footer-copyright">
+      <div class="container">
+      Derechos reservados FYCT 
+      </div>
+    </div>
+</footer>
+
+
+<!-- Dropdown Structure -->
+  <ul id='carritoDrop' class='dropdown-content collection'>
+
+  <div id="dropdown_container"></div>
+
+
+   <!-- <li class="collection-item avatar">
+     <img src="https://ss237.liverpool.com.mx/xl/1043934841.jpg" alt="" class="circle">
+     <div class="row"> 
+        <div class="valign-wrapper col s4"><h5>ZapatoTest</h5></div>
+        <div class="col s3"><a><i class="tiny material-icons">expand_less</i></a></div>
+        <div class="col s3"><a><i class="tiny material-icons">expand_more</i></a></div>
+        <div class="col s3"> <a href="#!" class="secondary-content"><i class="material-icons">remove_shopping_cart</i></a></div>
+     </div>
+   </li> -->
+
+  <!--   <li class="collection-item avatar">
+      <img src="https://ss237.liverpool.com.mx/xl/1043934841.jpg" alt="" class="circle">
+      <span class="title">Zapato2</span>
+       <a href="#!" class="secondary-content "><i class="material-icons">remove_shopping_cart</i></a>
+   </li>
+
+   <li class="collection-item avatar">
+      <img src="https://ss237.liverpool.com.mx/xl/1043934841.jpg" alt="" class="circle">
+      <span class="title">Zapato3</span>
+       <a href="#!" class="secondary-content "><i class="material-icons">remove_shopping_cart</i></a>
+   </li>
+ -->
+    <li class="divider"></li>
+    <li><a href="/Carrito"><i class="material-icons">shopping_cart</i>Got to cart</a></li>
+  </ul>
+
+<!--  Scripts-->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="js/materialize.js"></script> 
+<script src="js/init.js"></script>
+<script src="js/carrito.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+  <script src="js/checkLogin.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FYCT</title>
+
+    <!-- CSS  -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="css/materialize.css"
+      type="text/css"
+      rel="stylesheet"
+      media="screen,projection"
+    />
+    <link
+      href="css/style.css"
+      type="text/css"
+      rel="stylesheet"
+      media="screen,projection"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .column {
+        width: 33.33%;
+        padding: 5px;
+        margin: 0px auto;
+        display: inline-block;
+      }
+
+      /* Clearfix (clear floats) */
+      .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="white" role="navigation">
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="/" class="brand-logo">
+          <img src="imagenes/logo.png" />
+        </a>
+        <ul class="right hide-on-med-and-down">
+          <li id="homeBtn"><a href="/">Home</a></li>
+          <li id="storeBtn"><a href="/Tienda">Store</a></li>
+          <li id="loginBtn"><a href="/IniciarSesion">Login</a></li>
+          <li id="registerBtn"><a href="/Registro">Register</a></li>
+          <li id="cartBtn">
+            <a class="dropdown-trigger" href="#" data-target="carritoDrop"
+              >Cart</a
+            >
+          </li>
+        </ul>
+
+        <ul id="nav-mobile" class="sidenav">
+          <li id="homeBtnMob"><a href="/">Home</a></li>
+          <li id="storeBtnMob"><a href="/Tienda">Store</a></li>
+          <li id="loginBtnMob"><a href="/IniciarSesion">Login</a></li>
+          <li id="registerMob"><a href="/Registro">Register</a></li>
+          <li id="cartBtnMob"><a href="/Carrito">Cart</a></li>
+        </ul>
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger"
+          ><i class="material-icons">menu</i></a
+        >
+      </div>
+    </nav>
+
+    <br />
+    <br />
+    <br />
+
+    <div class="container">
+      <div class="row">
+        <div class="col s12 offset-s1">
+          <span class="flow-text"
+            ><h3>Welcome Back <i></i> !</h3></span
+          >
+        </div>
+        <div class="col s6 offset-s2"><h4>Historial de Compras</h4></div>
+        <div class="col s8 offset-s2"><p>Tus ultimas compras:</p></div>
+        <div class="row">
+          <div class="col s12 offset-s2" id="history">
+            <!--Aqui se Añade el historial de compras del usuario-->
+          </div>
+        </div>
+        <br /><br />
+        <div class="col s6 offset-s2"><h4>Recomendaciones</h4></div>
+        <div class="col s8 offset-s2"><p>Tambien te puede interesar...</p></div>
+        <div class="row">
+          <div class="col s12 offset-s2" id="recomendations">
+            <!--Aqui se Añade el historial de compras del usuario-->
+          </div>
+        </div>
+        <br /><br />
+        <br /><br />
+
+        <div class="col s12">
+          <div class="col s6 offset-s2">
+            <h3>Actualizar Datos de Envio:</h3>
+          </div>
+          <div class="row">
+            <div class="input-field col s8 offset-s2">
+              <input
+                type="text"
+                name="Direccion"
+                placeholder="Agregar nueva direccion"
+                id="direccion"
+              />
+              (Direccion actual: 3086 Emma Street, Lubbock, Texas, 79041)
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s4 offset-s2">
+              <select class="pais" id="pais">
+                <option value="" disabled selected>Escoge una opcion..</option>
+                <option value="MX">Mexico</option>
+                <option value="US">Estados Unidos</option>
+              </select>
+              <label>Pais</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s4 offset-s2">
+              <select class="estado" id="estado">
+                <option value="" disabled selected>Escoge una opcion..</option>
+                <option value="NL">Nuevo Leon</option>
+                <option value="CDM">Ciudad de Mexico</option>
+                <option value="GD">Guadalajara</option>
+              </select>
+              <label>Estado</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s4 offset-s2">
+              <select class="ciudad" id="ciudad">
+                <option value="" disabled selected>Escoge una opcion..</option>
+                <option value="MTY">Monterrey</option>
+                <option value="GDP">Guadalupe</option>
+                <option value="SC">Santa Catarina</option>
+              </select>
+              <label>Ciudad</label>
+            </div>
+          </div>
+        </div>
+        <div class="col s2 offset-s2">
+          <a id="update" class="waves-effect waves-light btn"
+            >Guardar Cambios</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <footer class="page-footer teal">
+      <div class="footer-copyright">
+        <div class="container">
+          Derechos reservados FYCT
+        </div>
+      </div>
+    </footer>
+
+    <!-- Dropdown Structure -->
+    <ul id="carritoDrop" class="dropdown-content collection">
+      <div id="dropdown_container"></div>
+
+      <li class="divider"></li>
+      <li>
+        <a href="/Carrito"
+          ><i class="material-icons">shopping_cart</i>Got to cart</a
+        >
+      </li>
+    </ul>
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/perfil.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="js/checkLogin.js"></script>
+    <script src="js/cartDropDown.js"></script>
+  </body>
+</html>
