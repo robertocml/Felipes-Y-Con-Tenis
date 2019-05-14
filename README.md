@@ -13,12 +13,12 @@ Este proyecto fue desarrollado usando las siguientes tecnologias base:
 - MySQL
 
 El servidor corriendo la aplicación requerirá de las siguientes tecnologías instaladas:
--Python 3.6.X
--NodeJS 11.7.X
--Npm 6.5.X
--Git version 2.14.X
--MySQL 8.X
--Materialize CSS
+* Python 3.6.X
+* NodeJS 11.7.X
+* Npm 6.5.X
+* Git version 2.14.X
+* MySQL 8.X
+* Materialize CSS
 
 
 
