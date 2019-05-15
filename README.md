@@ -45,7 +45,7 @@ Una vez guardado procedemos a abrir una terminal en la ruta donde fue guardado y
 
 ![cliente1](https://user-images.githubusercontent.com/12022308/57740127-da7a1680-767b-11e9-9260-55ab804374a0.PNG)
 
-![cliente15](https://user-images.githubusercontent.com/12022308/57740137-e9f95f80-767b-11e9-8eed-491360f0beb1.PNG)
+![cliente152](https://user-images.githubusercontent.com/12022308/57740422-78baac00-767d-11e9-80e7-58cd97f99ebf.PNG)
 
 ![cliente2](https://user-images.githubusercontent.com/12022308/57740146-f382c780-767b-11e9-839b-941b208b10c4.PNG)
 
