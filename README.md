@@ -34,3 +34,21 @@ El siguiente tutorial mostrará el procedimiento de instalación en un ordenador
 Y lo guardamos como test.js (en este caso).
 Una vez guardado procedemos a abrir una terminal en la ruta donde fue guardado y lo probamos con el comando 
 <node test.js>. 
+
+# Screenshots de algunas vistas de ambas aplicaciones.
+
+- Portal del administrador
+![admin](https://user-images.githubusercontent.com/12022308/57740112-c2a29280-767b-11e9-85cd-a5bb3ac7f12f.PNG)
+
+- Vistas de la tienda
+
+
+![cliente1](https://user-images.githubusercontent.com/12022308/57740127-da7a1680-767b-11e9-9260-55ab804374a0.PNG)
+
+![cliente15](https://user-images.githubusercontent.com/12022308/57740137-e9f95f80-767b-11e9-8eed-491360f0beb1.PNG)
+
+![cliente2](https://user-images.githubusercontent.com/12022308/57740146-f382c780-767b-11e9-839b-941b208b10c4.PNG)
+
+![cliente3](https://user-images.githubusercontent.com/12022308/57740185-2036df00-767c-11e9-94e6-09c4e8a9a2bb.PNG)
+
+
