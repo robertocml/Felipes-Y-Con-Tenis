@@ -40,7 +40,7 @@ Una vez guardado procedemos a abrir una terminal en la ruta donde fue guardado y
 - Portal del administrador
 ![admin](https://user-images.githubusercontent.com/12022308/57740112-c2a29280-767b-11e9-85cd-a5bb3ac7f12f.PNG)
 
-- Vistas de la tienda
+- Vistas de la tienda (Admin y CLiente)
 
 
 ![cliente1](https://user-images.githubusercontent.com/12022308/57740127-da7a1680-767b-11e9-9260-55ab804374a0.PNG)
